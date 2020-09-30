@@ -1,0 +1,17 @@
+<div id="maindiv">
+  <label>Word:</label> <input type="text" id="myText" value="Your text here!">
+  <br>
+  <button onclick="checkLength()">To uppercase!</button>
+  <p id="elementlol"></p>
+</div>
+
+<br>
+
+<script>
+function checkLength(){
+  let length = document.getElementById("myText").value.toUpperCase();
+  let lengthEL = document.createElement('p');
+  lengthEL.innerHTML = "Length: " + length;
+  document.getElementById("elementlol").innerHTML = "Uppercased: " + length;
+}
+</script>

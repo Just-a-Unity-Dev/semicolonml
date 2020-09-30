@@ -1,0 +1,25 @@
+<div id="maindiv">
+  <label>Word:</label> <input type="text" id="myText" value="Your text here!">
+  <br>
+  <button onclick="checkLength()">Reverse the text!</button>
+  <p id="elementlol"></p>
+</div>
+
+<br>
+
+<script>
+function checkLength(){
+  let length = document.getElementById("myText").value;
+  let lengthEL = document.createElement('p');
+  lengthEL.innerHTML = "Length: " + length;
+  document.getElementById("elementlol").innerHTML = "Reversed Word: " + reverseString(length);
+}
+
+
+function reverseString(str) {
+    var splitString = str.split("");
+    var reverseArray = splitString.reverse();
+    var joinArray = reverseArray.join("");
+    return joinArray;
+}
+</script>

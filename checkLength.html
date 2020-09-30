@@ -1,0 +1,17 @@
+<div id="maindiv">
+  <label>Word:</label> <input type="text" id="myText" value="Your text here!">
+  <br>
+  <button onclick="checkLength()">Check the length!</button>
+  <p id="elementlol"></p>
+</div>
+
+<br>
+
+<script>
+function checkLength(){
+  let length = document.getElementById("myText").value.length;
+  let lengthEL = document.createElement('p');
+  lengthEL.innerHTML = "Length: " + length;
+  document.getElementById("elementlol").innerHTML = "Length: " + length;
+}
+</script>
